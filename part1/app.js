@@ -164,5 +164,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 });
 
 app.get('/api/walkers/summary', async (req, res) => {
-    try {}
+    try {
+        const [walkers] = await pool.execute(
+    }
 });
