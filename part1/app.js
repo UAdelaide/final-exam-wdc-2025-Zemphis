@@ -40,5 +40,8 @@ async function insertInitialData() {
             await connection.execute('DELETE FROM WalkRequests');
             await connection.execute('DELETE FROM Dogs');
             await connection.execute('DELETE FROM Users');
+            console.log('Database tables cleared');
+
+            awai
         }
     }
