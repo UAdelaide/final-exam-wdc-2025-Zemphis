@@ -175,8 +175,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
             wr.duration_minutes,
             wr.location
         FROM WalkRequests wr
-        JOIN Dogs d ON wr.dog_id = d.id
-        JOIN Users u ON d.owner_id = u.id
+        JOIN Dogs d ON wr.dog_id = d.dog_id
+        JOIN Users u ON d.owner_id = u.user_id
         WHERE wr.status = 'open';
         `);
         res.json(rows);
@@ -201,7 +201,7 @@ app.get('/api/walkers/summary', async (req, res) => {
                 FROM
                     WalkApplications wa
                 JOIN
-                    WalkRequests wr ON wa.request_id = wr.id
+                    WalkRequests wr ON wa.request_id = wr.request_id
                 WHERE
                     wa.walker_id = ? AND wr.status = 'accepted' AND wa.status = 'completed';
             `, [walker_id]);
