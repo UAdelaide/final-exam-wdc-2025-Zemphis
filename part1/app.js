@@ -70,15 +70,19 @@ async function insertInitialData() {
             const [bob] = await connection.execute('SELECT id FROM Users WHERE username = ?', ['bobwalker']);
             const bobId = bob.length > 0 ? bob[0].id : null;
             const [carol] = await connection.execute('SELECT id FROM Users WHERE username = ?', ['carol123']);
-            const carolId = carol.length > 0 ? carol[0].id
+            const carolId = carol.length > 0 ? carol[0].id : null;
+            const [a] = await connection.execute('SELECT id FROM Users WHERE username = ?', ['a']);
+            const aId = a.length > 0 ? a[0].id : null;
+            const [b] = await connection.execute('SELECT id FROM Users WHERE username = ?', ['b']);
+            const bId = b.length > 0 ? b[0].id : null;
 
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
-                [1, 'Max', 'medium']
+                [aliceId, 'Max', 'medium']
             );
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
-                [3, 'Bella', 'small']
+                [, 'Bella', 'small']
             );
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
