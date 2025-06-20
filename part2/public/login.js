@@ -5,4 +5,5 @@ const path = require('path');
 
 const app = express();
 // Middleware
-app.use
+app.use(express.urlencoded({ extended: true }));
+
