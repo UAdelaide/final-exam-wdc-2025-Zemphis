@@ -187,7 +187,7 @@ function login() {
             try {
                 const response = JSON.parse(this.responseText);
                 console.log(response);
-                if
+                if (response)
             }
     };
     //Open connection to server & send the post data using a POST request
