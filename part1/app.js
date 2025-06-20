@@ -218,9 +218,9 @@ async function startApp() {
     await insertInitialData();
 
     app.listen(port, () => {
-        console.log('Server is running on http://localhost:${port}');
+        console.log(`Server is running on http://localhost:${port}`);
         console.log('Test the API endpoints:');
-        console.log('- http://localhost:${port}/api/dogs');
+        console.log(`- http://localhost:${port}/api/dogs');
         console.log('- http://localhost:3000/api/walkrequests/open');
         console.log('- http://localhost:3000/api/walkers/summary');
     });
