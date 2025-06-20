@@ -98,7 +98,8 @@ async function insertInitialData() {
             );
             console.log('Initial dog data inserted');
 
-            
+            const [max] = await connection.execute('SELECT id FROM Dogs WHERE name = ?', ['Max']);
+            const maxId = max.length > 0 ? max[0].id : null;
 
             await connection.execute(
                 'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
