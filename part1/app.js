@@ -64,6 +64,6 @@ async function insertInitialData() {
             );
             console.log('Initial data inserted');
 
-            
+            const [alice] 
         }
     }
