@@ -194,7 +194,8 @@ app.get('/api/walkers/summary', async (req, res) => {
                     wa.walker_id = ?;
             `, [walker_id]);
 
-            const average_rating = ratingSummary[0].average_rating !== null ? parseFloat(ratingSummary[0].average_rating) : null;
+            const average_rating = ratingSummary[0].average_rating !== null
+            ? parseFloat(ratingSummary[0].average_rating) : null;
             const total_ratings = ratingSummary[0].total_ratings || 0;
 
             summary.push({
@@ -205,7 +206,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             });
         }
         res.json(summary);
-    }  catch (error) {
+    } catch (error) {
         console.error('Error fetching walker summary:', error);
         return res.status(500).json({ error: 'Internal server error' });
     }
