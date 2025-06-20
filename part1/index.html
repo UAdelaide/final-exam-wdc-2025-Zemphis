@@ -52,7 +52,11 @@
                 animation: moveButton 5s infinite linear;
                 cursor: grab;
             }
-            
+            @keyframes moveButton {
+                0% { transform: translateX(0); }
+                50% { transform: translateX(100px); }
+                100% { transform: translateX(0); }
+            }
         </style>
     </head>
     <body id = "app" class = "container">
