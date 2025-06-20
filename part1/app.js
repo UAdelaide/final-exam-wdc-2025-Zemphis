@@ -15,8 +15,10 @@ const dbConfig = {
   connectionLimit: 10,
   queueLimit: 0
 };
-let pool = mysql.createPool(dbConfig);
+let pool;
 
 async function intialiseDatabase() {
-    c
+    try {
+        pool =
+    }
 }
