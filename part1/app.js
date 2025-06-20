@@ -169,20 +169,7 @@ app.get('/api/walkers/summary', async (req, res) => {
         const summary = [];
 
         for (const walker of walkers) {
-            const [walks] = await pool.execute(`
-                SELECT COUNT(*) AS total_walks, SUM(duration_minutes) AS total_duration
-                FROM WalkRequests wr
-                JOIN Dogs d ON wr.dog_id = d.id
-                WHERE d.owner_id IN (
-                    SELECT id FROM Users WHERE role = 'owner'
-                ) AND wr.status = 'accepted' AND d.owner_id = ?
-            `, [walker.user_id]);
-
-            summary.push({
-                walker_username: walker.username,
-                total_walks: walks[0].total_walks,
-                total_duration: walks[0].total_duration
-            });
+            const 
         }
     }
 });
