@@ -33,4 +33,7 @@ async function intialiseDatabase() {
 async function insertInitialData() {
     try {
         const connection = await pool.getConnection();
-        await connection.being
+        await connection.beginTransaction();
+        try {
+            a
+        }
