@@ -26,5 +26,8 @@ async function intialiseDatabase() {
         console.log('Connected to database');
     } catch (error) {
         console.error('Failed to connect to database');
+        process.exit(1);
     }
 }
+
+as
