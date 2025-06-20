@@ -200,8 +200,6 @@ function login() {
     xmlhttp.send(JSON.stringify(user));
 }
 
-
-
 function logout(){
 
     // Create AJAX Request
