@@ -20,5 +20,6 @@ let pool;
 async function intialiseDatabase() {
     try {
         pool = mysql.createPool(dbConfig);
+        console.log('Database connection ')
     }
 }
