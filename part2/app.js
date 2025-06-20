@@ -14,7 +14,7 @@ app.use(session({
     secret: "secret-key",
     resave: false,
     saveUninitialized: true,
-    
+    cookie: secured: false
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
