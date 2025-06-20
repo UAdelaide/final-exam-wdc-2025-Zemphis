@@ -132,7 +132,8 @@ app.get('/api/dogs', async (req, res) => {
             d.size,
             u.username AS owner_username
             FROM Dogs d
-            JOIN Users u ON d.owner_id = u.id;`);
+            JOIN Users u ON d.owner_id = u.id;`
+);
     } catch (error) {
         console.error('Error fetching dogs:', error);
         return res.status(500).json({ error: 'Internal server error' });
