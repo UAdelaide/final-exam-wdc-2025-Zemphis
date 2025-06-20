@@ -28,7 +28,11 @@ if ($result->num_rows == 1) {
 
         // Redirect based on user role
         if ($user['role'] === 'owner') {
-            header("")
+            header("Location: owner_dashboard.php");
+        } elseif ($user['role'] === 'walker') {
+            header("Location: walker_dashboard.php");
+        } else {
+            header("Location: index.php");
         }
     }
 }
