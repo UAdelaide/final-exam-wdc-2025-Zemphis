@@ -229,6 +229,8 @@ function login() {
             } else {
                 window.location.href = 'walker-dashboard.html';
             }
+        } else {
+            
         }
     }
 }
