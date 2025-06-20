@@ -35,5 +35,5 @@ async function insertInitialData() {
         const connection = await pool.getConnection();
         await connection.beginTransaction();
         try {
-            a
+            await connection.begin
         }
