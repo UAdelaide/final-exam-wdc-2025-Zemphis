@@ -169,7 +169,8 @@ app.get('/api/walkers/summary', async (req, res) => {
         const summary = [];
 
         for (const walker of walkers) {
-            const 
+            const walker_username = walker.username;
+            const walker_id = walker.user_id;
         }
     }
 });
