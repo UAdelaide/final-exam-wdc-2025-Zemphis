@@ -99,12 +99,12 @@ async function insertInitialData() {
             console.log('Initial dog data inserted');
 
             const [max] = await connection.execute('SELECT dog_id FROM Dogs WHERE name = ?', ['Max']);
-            const maxId = max.length > 0 ? max[0].id : null;
-            const [bella] = await connection.execute('SELECT id FROM Dogs WHERE name = ?', ['Bella']);
-            const bellaId = bella.length > 0 ? bella[0].id : null;
-            const [bobDog] = await connection.execute('SELECT id FROM Dogs WHERE name = ?', ['Bob']);
-            const bobDogId = bobDog.length > 0 ? bobDog[0].id : null;
-            const [abu] = await connection.execute('SELECT id FROM Dogs WHERE name = ?', ['Abu']);
+            const maxId = max.length > 0 ? max[0].dog_id : null;
+            const [bella] = await connection.execute('SELECT dog_id FROM Dogs WHERE name = ?', ['Bella']);
+            const bellaId = bella.length > 0 ? bella[0].dog_id : null;
+            const [bobDog] = await connection.execute('SELECT dog_id FROM Dogs WHERE name = ?', ['Bob']);
+            const bobDogId = bobDog.length > 0 ? bobDog[0].dog_id : null;
+            const [abu] = await connection.execute('SELECT dog_id FROM Dogs WHERE name = ?', ['Abu']);
             const abuId = abu.length > 0 ? abu[0].id : null;
             const [bren] = await connection.execute('SELECT id FROM Dogs WHERE name = ?', ['Bren']);
             const brenId = bren.length > 0 ? bren[0].id : null;
