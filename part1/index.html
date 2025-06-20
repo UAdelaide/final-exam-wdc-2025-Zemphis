@@ -57,7 +57,9 @@
                 },
                 mounted() {
                     this.fetchDogImage();
-                    setInterval
+                    setInterval(() => {
+                        this.fetchDogImage();
+                    }, 5000); // Fet
                 }
             });
         </script>
