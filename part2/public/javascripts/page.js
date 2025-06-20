@@ -183,7 +183,8 @@ function login() {
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
-        const login
+        const loginMessage = document.getElementById('loginMessage');
+        loginMessage. = '';
         if (this.status == 200) {
             try {
                 const response = JSON.parse(this.responseText);
