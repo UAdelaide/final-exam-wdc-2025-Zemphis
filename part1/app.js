@@ -194,7 +194,7 @@ app.get('/api/walkers/summary', async (req, res) => {
                     wa.walker_id = ?;
             `, [walker_id]);
 
-            const average_rating = ratingSummary[0].average_rating !== null ? parseFloat(rating)
+            const average_rating = ratingSummary[0].average_rating !== null ? parseFloat(ratingSummary[0].average_rating) : null;
         }
     }
 });
