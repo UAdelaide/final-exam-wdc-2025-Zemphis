@@ -184,7 +184,9 @@ function login() {
 
     xmlhttp.onreadystatechange = function() {
         if (this.status == 200) {
-            
+            try {
+                const response = JSON.parse(this.responseText);
+            }
     };
     //Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/users/login", true);
