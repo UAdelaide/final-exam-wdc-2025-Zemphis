@@ -206,7 +206,9 @@ function login() {
             alert("login failed");
         }
 
-        x
+        xmlhttp.open("POST", "/users/login", true);
+        xmlhttp.setRequestHeader("Content-type", "application/json");
+        xmlhttp.send(JSON.stringify(user));
     };
 
     xmlhttp.open("POST", "/users/login", true);
