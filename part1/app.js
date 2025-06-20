@@ -42,6 +42,8 @@ async function insertInitialData() {
             await connection.execute('DELETE FROM Users');
             console.log('Database tables cleared');
 
-            awai
+            await connection.execute(
+                ''
+            )
         }
     }
