@@ -29,7 +29,9 @@ function isAuthenticated(req, res, next) {
 
 // Routes
 // Login route
-app.post('/users/log')
+app.post('/users/login', async (req, res) => {
+    
+})
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
