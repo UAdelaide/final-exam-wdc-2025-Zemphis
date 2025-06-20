@@ -190,10 +190,11 @@ app.get('/api/walkers/summary', async (req, res) => {
                     COUNT(wr.rating) AS total_ratings
                 FROM
                     WalkRatings wr
-                JOIN
-                    WalkApplications wa ON wr.application_id = wa.id
                 WHERE
                     wa.walker_id = ?;
+            `, [walker_id]);
+
+            
         }
     }
 });
