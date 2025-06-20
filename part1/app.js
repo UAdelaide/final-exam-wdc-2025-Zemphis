@@ -23,6 +23,6 @@ async function intialiseDatabase() {
         console.log('Database connection pool created');
 
         await pool.getConnection();
-        console.log
-    }
+        console.log('Connected to database');
+    } catch
 }
