@@ -111,7 +111,10 @@ async function insertInitialData() {
             await connection.commit();
             console.log('Database initialised');
 
-        } catch
+        } catch (error) {
+            await connection.rollback();
+            console.error('Error inserting initial data:', error);
+        }
 
     }
 }
