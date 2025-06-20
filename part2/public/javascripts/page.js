@@ -197,8 +197,9 @@ function login() {
                         window.location.href = 'walker-dashboard.html';
                     } else {
                         loginMessage.textContent = 'Login successful but role not recognised.';
+                        loginMessage.style.display = 'block';
                     }
-                }
+                } else
             }
     };
     //Open connection to server & send the post data using a POST request
