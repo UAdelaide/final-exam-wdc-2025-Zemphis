@@ -200,7 +200,8 @@ app.get('/api/walkers/summary', async (req, res) => {
             summary.push({
                 walker_username,
                 total_ratings,
-                average_rating
+                average_rating,
+                completed_walks
             });
         }
     }
