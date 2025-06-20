@@ -196,7 +196,7 @@ function login() {
                     } else if (response.role === 'walker') {
                         window.location.href = 'walker-dashboard.html';
                     } else {
-
+                        loginMessage.textContent = 'Login successful but role not recognised.';
                     }
                 }
             }
