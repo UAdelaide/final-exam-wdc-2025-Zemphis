@@ -223,7 +223,7 @@ async function startApp() {
         console.log('- http://localhost:3000/api/dogs');
         console.log('- http://localhost:3000/api/walkrequests/open');
         console.log('- http://localhost:3000/api/walkers/summary');
-    }
+    });
 }
 
 startApp();
