@@ -203,6 +203,9 @@ function login() {
                     loginMessage.textContent = 'Role information missing.';
                     loginMessage.style.display = 'block';
                 }
+            } catch (e) {
+                loginMessage.textContent = 'Error parsing response: ' + e.message;
+                loginMessage.style.display = 'block';
             }
     };
     //Open connection to server & send the post data using a POST request
