@@ -27,7 +27,9 @@ if ($result->num_rows == 1) {
         $_SESSION['role'] = $user['role'];
 
         // Redirect based on user role
-        if ($user['role'] )
+        if ($user['role'] === 'owner') {
+            
+        }
     }
 }
 
