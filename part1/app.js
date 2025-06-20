@@ -124,4 +124,4 @@ async function insertInitialData() {
 }
 
 
-app.get()
+app.get('/api/')
