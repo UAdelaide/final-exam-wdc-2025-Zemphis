@@ -212,7 +212,10 @@ function login() {
             // Handle error responses
             loginMessage.textContent = 'Login failed. Please check your credentials.';
             loginMessage.style.display = 'block';
-        } ekse
+        } else {
+            loginMessage.textContent = 'Unexpected response from server.';
+            loginMessage.style.display = 'block';
+        }
     //Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
