@@ -118,6 +118,7 @@ async function insertInitialData() {
         } finally {
             if (connection) connection.release();
         }
-
+    } catch (error) {
+        console.error('Error during database initialisation:', error);
     }
 }
