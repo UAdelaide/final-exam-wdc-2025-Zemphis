@@ -1,6 +1,4 @@
 const express = require('express');
-const expressSession = require('express-session');
-const mysql = require('mysql2');
 const path = require('path');
 require('dotenv').config();
 
@@ -19,9 +17,3 @@ app.use('/api/users', userRoutes);
 
 // Export the app instead of listening here
 module.exports = app;
-
-app.post('/users/login', (req, res) => {
-    const { user, pass } = req.body;
-
-    debug.query
-});
