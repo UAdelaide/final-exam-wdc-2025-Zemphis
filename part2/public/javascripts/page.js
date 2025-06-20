@@ -208,7 +208,7 @@ function login() {
                 loginMessage.textContent = 'Error processing login response.';
                 loginMessage.style.display = 'block';
             }
-    };
+    }
     //Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
