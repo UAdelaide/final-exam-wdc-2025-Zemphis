@@ -211,26 +211,3 @@ function logout(){
     xmlhttp.send();
 
 }
-
-function login() {
-    let user = {
-        user: document.getElementById('username').value,
-        pass: document.getElementById('password').value
-    }
-
-    // Create AJAX Request
-    var xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            const response = JSON.parse(this.responseText);
-            if (response.role == 'owner') {
-                window.location.href = 'owner-hasboard.html';
-            } else {
-                window.location.href = 'walker-dashboard.html';
-            }
-        } else {
-            alert("login failed");
-        }
-    }
-}
