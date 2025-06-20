@@ -63,5 +63,9 @@ async function insertInitialData() {
                 ['b', 'b@example.com', 'b', 'owner']
             );
             console.log('Initial data inserted');
+
+            await connection.execute(
+                
+            );
         }
     }
