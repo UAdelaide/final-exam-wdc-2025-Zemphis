@@ -76,7 +76,10 @@ async function insertInitialData() {
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
                 [2, 'Bob', 'large']
             );
-            await 
+            await connection.execute(
+                'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
+                [4, 'Abu', '']
+            );
 
     }
 }
