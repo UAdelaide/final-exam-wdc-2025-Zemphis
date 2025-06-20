@@ -28,7 +28,7 @@ if ($result->num_rows == 1) {
 
         // Redirect based on user role
         if ($user['role'] === 'owner') {
-            
+            header("")
         }
     }
 }
