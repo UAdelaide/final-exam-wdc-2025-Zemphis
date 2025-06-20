@@ -183,6 +183,7 @@ function login() {
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
+        
         if (this.status == 200) {
             try {
                 const response = JSON.parse(this.responseText);
@@ -193,7 +194,7 @@ function login() {
                     } else if (response.role === 'walker') {
                         window.location.href = 'walker-dashboard.html';
                     } else {
-                        
+
                     }
                 }
             }
