@@ -214,7 +214,7 @@ app.get('/api/walkers/summary', async (req, res) => {
                 FROM
                     WalkRatings wr
                 WHERE
-                    wa.walker_id = ?;
+                    wr.walker_id = ?;
             `, [walker_id]);
 
             const average_rating = ratingSummary[0].average_rating !== null
