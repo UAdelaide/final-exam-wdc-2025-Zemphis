@@ -181,6 +181,7 @@ app.get('/api/walkers/summary', async (req, res) => {
                     WalkRequests wr ON wa.request_id = wr.id
                 WHERE
                     wa.walker_id = ? AND wr.status = 'accepted' AND wa.status = 'completed';
+            `, [walker_id]);
         }
     }
 });
