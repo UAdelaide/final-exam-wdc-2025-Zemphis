@@ -226,7 +226,9 @@ function login() {
             const response = JSON.parse(this.responseText);
             if (response.role == 'owner') {
                 window.location.href = 'owner-hasboard.html';
-            } else 
+            } else {
+                window.location.href = 'walker-dashboard.html';
+            }
         }
     }
 }
