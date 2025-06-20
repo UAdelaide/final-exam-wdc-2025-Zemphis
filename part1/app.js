@@ -108,7 +108,7 @@ async function insertInitialData() {
             );
             console.log('Initial walk requests inserted');
 
-            
+            const
         }
 
     }
