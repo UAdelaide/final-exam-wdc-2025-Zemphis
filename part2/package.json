@@ -11,14 +11,13 @@
     "debug": "~2.6.9",
     "dotenv": "^16.5.0",
     "express": "^4.21.2",
-    "express-session": "^1.17.1",
+    "express-session": "^1.18.1",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
     "mysql2": "^3.14.1"
   },
   "description": "This folder contains the files for part 2.",
   "main": "app.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"
