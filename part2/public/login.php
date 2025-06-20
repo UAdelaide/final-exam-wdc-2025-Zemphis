@@ -38,5 +38,7 @@ if ($result->num_rows == 1) {
     } else {
         echo "Invalid password.";
     }
+} else {
+    echo "No user found with that username.";
 }
 
