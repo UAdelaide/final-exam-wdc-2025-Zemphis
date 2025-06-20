@@ -108,9 +108,6 @@
                 },
                 mounted() {
                     this.fetchDogImage();
-                    setInterval(() => {
-                        this.fetchDogImage();
-                    }, 5000);
                 }
             });
             app.mount('#app');
