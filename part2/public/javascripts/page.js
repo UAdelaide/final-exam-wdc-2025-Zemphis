@@ -193,7 +193,7 @@ function login() {
                     } else if (response.role === 'walker') {
                         window.location.href = 'walker-dashboard.html';
                     } else {
-                        alert('Login successful, but no valid role found.');
+                        alert('Login succes
                     }
                 }
             }
