@@ -65,12 +65,16 @@ async function insertInitialData() {
             );
             console.log('Initial data inserted');
 
-            const [users] = await connection.execute('SELECT user_id FROM Users');
-            const aliceId = users.find(user => user.username === 'alice123').user_id;
-            const bobId = users.find(user => user.username === 'bobwalker').user_id;
-            const carolId = users.find(user => user.username === 'carol123').user_id;
-            const aId = users.find(user => user.username === 'a').user_id;
-            const bId = users.find( => user.username === 'b').user_id;
+            const [alice] = await connection.execute('SELECT user_id FROM Users WHERE username = ?', ['alice123']);
+            const aliceId = alice.length > 0 ? alice[0].user_id : null;
+            const [bob] = await connection.execute('SELECT user_id FROM Users WHERE username = ?', ['bobwalker']);
+            const bobId = bob.length > 0 ? bob[0].user_id : null;
+            const [carol] = await connection.execute('SELECT user_id FROM Users WHERE username = ?', ['carol123']);
+            const carolId = carol.length > 0 ? carol[0].user_id : null;
+            const [a] = await connection.execute('SELECT user_id FROM Users WHERE username = ?', ['a']);
+            const aId = a.length > 0 ? a[0].user_id : null;
+            const [b] = await connection.execute('SELECT user_id FROM Users WHERE username = ?', ['b']);
+            const bId = b.length > 0 ? b[0].user_id : null;
 
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
