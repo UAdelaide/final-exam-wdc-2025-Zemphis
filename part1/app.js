@@ -66,26 +66,31 @@ async function insertInitialData() {
             console.log('Initial data inserted');
 
             const [users] = await connection.execute('SELECT user_id FROM Users');
-            const [userID] = users.map(user => user.user_id);
+            const aliceId = users.find(user => user.username === 'alice123').user_id;
+            const bobId = users.find(user => user.username === 'bobwalker').user_id;
+            const carolId = users.find(user => user.username === 'carol123').user_id;
+            const aId = users.find(user => user.username === 'a').user_id;
+            const bId = users.find(user => user.username === 'b').user_id;
+
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
-                [userID[0], 'Max', 'medium']
+                [aliceId, 'Max', 'medium']
             );
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
-                [userID[1], 'Bella', 'small']
+                [carolId, 'Bella', 'small']
             );
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
-                [userID[2], 'Bob', 'small']
+                [bobId, 'Bob', 'small']
             );
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
-                [userID[3], 'Abu', 'small']
+                [aId, 'Abu', 'small']
             );
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
-                [userID[4], 'Bren', 'small']
+                [bId, 'Bren', 'small']
             );
             console.log('Initial dog data inserted');
 
