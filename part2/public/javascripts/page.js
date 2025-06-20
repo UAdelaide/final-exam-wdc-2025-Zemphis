@@ -205,6 +205,8 @@ function login() {
         } elseif (this.readyState == 4 && this.status >= 400) {
             alert("login failed");
         }
+
+        x
     };
 
     xmlhttp.open("POST", "/users/login", true);
