@@ -126,6 +126,7 @@ async function insertInitialData() {
 
 app.get('/api/dogs', async (req, res) => {
     try {
-        const [rows] = await pool.execute(~');
+        const [rows] = await pool.execute(`
+            SEL);
     }
 });
