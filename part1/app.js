@@ -175,7 +175,12 @@ app.get('/api/walkers/summary', async (req, res) => {
             const [compltedWalks] = await pool.execute(`
                 SELECT
                     COUNT(wa.request_id) AS completed_walks
-                FROM WalkApplications wa
+                FROM
+                    WalkApplications wa
+                JOIN
+                    WalkRequests wr ON wa.request_id = wr.id
+                WHERE
+                    wa.walker_id = ? AND wr.status = 'completed';
         }
     }
 });
