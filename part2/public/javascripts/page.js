@@ -186,6 +186,8 @@ function login() {
         if (this.status == 200) {
             try {
                 const response = JSON.parse(this.responseText);
+                console.log(response);
+                if
             }
     };
     //Open connection to server & send the post data using a POST request
