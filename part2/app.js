@@ -43,7 +43,7 @@ app.post('/users/login', async (req, res) => {
         console.error('Login error:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
-})
+});
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
