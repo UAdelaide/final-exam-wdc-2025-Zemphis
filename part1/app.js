@@ -88,6 +88,7 @@ async function insertInitialData() {
 
             await connection.execute(
                 'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
+                [1, ]
             );
 
     }
