@@ -35,5 +35,6 @@ async function insertInitialData() {
         const connection = await pool.getConnection();
         await connection.beginTransaction();
         try {
-            await connection.execute('DELTE '
+            await connection.execute('DELETE FROM WalkRatings');
         }
+    }
