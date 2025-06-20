@@ -98,12 +98,11 @@ async function insertInitialData() {
             );
             console.log('Initial dog data inserted');
 
-            const [dogs] = await connection.execute('SELECT dog_id FROM Dogs');
-            const dogIds = dogs.map(dog => dog.id);
+            
 
             await connection.execute(
                 'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
-                [dogIds[0], '2025-06-10 08:00:00', 30, 'Parklands', 'open']
+                [, '2025-06-10 08:00:00', 30, 'Parklands', 'open']
             );
             await connection.execute(
                 'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
