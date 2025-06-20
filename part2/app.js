@@ -12,7 +12,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
     secret: "secret-key",
-    resave: false,)
+    resave: false,
+    saveUninitialized: true,
+    
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
