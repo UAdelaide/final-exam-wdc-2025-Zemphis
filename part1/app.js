@@ -122,3 +122,6 @@ async function insertInitialData() {
         console.error('Error during database initialisation:', error);
     }
 }
+
+
+app.get()
