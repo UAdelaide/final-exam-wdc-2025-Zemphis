@@ -171,7 +171,9 @@ app.get('/api/walkers/summary', async (req, res) => {
         for (const walker of walkers) {
             const walker_username = walker.username;
             const walker_id = walker.user_id;
-            
+
+            const [compltedWalks] = await pool.execute(`
+                S
         }
     }
 });
