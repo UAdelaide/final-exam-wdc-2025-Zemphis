@@ -208,6 +208,7 @@ function login() {
                 loginMessage.textContent = 'Server error.';
                 loginMessage.style.display = 'block';
             }
+        
     };
     //Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/users/login", true);
