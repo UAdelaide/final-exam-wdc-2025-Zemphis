@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 function isAuthenticated(req, res, next) {
     if (req.session && req.session.user) {
-        return next();
+        next();
     } else {
         res.status(401).send('Unauthorized');
     }
