@@ -44,11 +44,11 @@ async function insertInitialData() {
             console.log('Database tables cleared');
 
             await connection.execute(
-                'INSERT INTO USERS (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
+                'INSERT INTO Users (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
                 ['alice123', 'alice@example.com', 'hashed123', 'owner']
             );
             await connection.execute(
-                'INSERT INTO USERS (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
+                'INSERT INTO Users (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
                 ['bobwalker', 'bob@example.com', 'hashed456', 'walker']
             );
             await connection.execute(
