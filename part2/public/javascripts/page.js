@@ -208,7 +208,11 @@ function login() {
                 loginMessage.textContent = 'Error processing login response.';
                 loginMessage.style.display = 'block';
             }
-    }
+    } else if (this.status >= 400) {
+            // Handle error responses
+            loginMessage.textContent = 'Login failed. Please check your credentials.';
+            loginMessage.style.display = 'block';
+        } ekse
     //Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
