@@ -213,5 +213,8 @@ function logout(){
 }
 
 function login() {
-    let user 
+    let user = {
+        user: document.getElementById('username').value,
+        pass: document.getElementById('password').value
+    }
 }
