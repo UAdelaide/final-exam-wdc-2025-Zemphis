@@ -205,5 +205,5 @@ function login() {
         } else {
             alert("login failed");
         }
-    }
+    };
 }
