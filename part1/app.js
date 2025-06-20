@@ -24,5 +24,7 @@ async function intialiseDatabase() {
 
         await pool.getConnection();
         console.log('Connected to database');
-    } catch
+    } catch (error) {
+        console.error('Failed to connect to data')
+    }
 }
