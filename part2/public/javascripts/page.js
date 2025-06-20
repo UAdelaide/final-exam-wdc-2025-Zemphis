@@ -221,5 +221,7 @@ function login() {
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
 
-    
+    xmlhttp.onreadystatechange = function() {
+        
+    }
 }
