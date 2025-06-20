@@ -204,5 +204,9 @@ app.get('/api/walkers/summary', async (req, res) => {
                 completed_walks
             });
         }
+        res.json(summary);
+    }  catch (error) {
+        console.error('Error fetching walker summary:', error);
+        return res.status(500).json({ error: 'Internal server error' });
     }
 });
