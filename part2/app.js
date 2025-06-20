@@ -29,21 +29,7 @@ function isAuthenticated(req, res, next) {
 
 // Routes
 // Login route
-app.post('/users/login', async (req, res) => {
-    const { user, pass } = req.body;
-    try {
-        const [rows] = await pool.query('SELECT * FROM users WHERE username = ? AND password = ?', [user, pass]);
-        if (rows.length > 0) {
-            req.session.user = rows[0];
-            res.json({ role: rows[0].role });
-        } else {
-            res.status(401).json({ error: 'Invalid credentials' });
-        }
-    } catch (error) {
-        console.error('Login error:', error);
-        res.status(500).json({ error: 'Internal server error' });
-    }
-});
+app.post('/users/log')
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
