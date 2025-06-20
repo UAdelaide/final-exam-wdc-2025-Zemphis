@@ -110,6 +110,8 @@ async function insertInitialData() {
 
             await connection.commit();
             console.log('Database initialised');
+
+            
         }
 
     }
