@@ -230,7 +230,7 @@ function login() {
                 window.location.href = 'walker-dashboard.html';
             }
         } else {
-            
+            alert("login failed");
         }
     }
 }
