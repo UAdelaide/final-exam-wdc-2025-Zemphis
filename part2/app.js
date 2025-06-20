@@ -8,6 +8,10 @@ require('dotenv').config();
 const app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+// Set up MySQL connection pool
+
+
 
 
 
