@@ -146,7 +146,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
     try {
         const [rows] = await pool.execute(`
         SELECT
-            wr.id AS request_id,
+            wr.request_id AS request_id,
             d.name AS dog_name,
             u.username AS owner_username,
             wr.requested_time,
