@@ -1,4 +1,3 @@
-//nvm im deeply stupid, I just hadn't pushed ;-;
 var express = require('express');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
