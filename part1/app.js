@@ -173,7 +173,8 @@ app.get('/api/walkers/summary', async (req, res) => {
             const walker_id = walker.user_id;
 
             const [compltedWalks] = await pool.execute(`
-                S
+                SELECT
+                    COUNT(wa)
         }
     }
 });
