@@ -200,7 +200,7 @@ function login() {
                         loginMessage.style.display = 'block';
                     }
                 } else {
-                    loginMessage.textContent = 'Server error.';
+                    loginMessage.textContent = 'Role infomation missing.';
                     loginMessage.style.display = 'block';
                 }
             } catch (e) {
