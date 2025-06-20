@@ -204,7 +204,8 @@ function login() {
                     loginMessage.style.display = 'block';
                 }
             } catch (e) {
-                loginMessage.textContent = 'Error parsing response: ' + e.message;
+                console.error('Error parsing response:', e);
+                loginMessage.textContent = 'Error processing login response.';
                 loginMessage.style.display = 'block';
             }
     };
