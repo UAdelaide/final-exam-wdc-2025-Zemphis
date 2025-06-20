@@ -1,5 +1,6 @@
 const express = require('express');
 const expressSession = require('express-session');
+const bcrypt = require('bcrypt');
 const path = require('path');
 require('dotenv').config();
 
