@@ -199,7 +199,10 @@ function login() {
                         loginMessage.textContent = 'Login successful but role not recognised.';
                         loginMessage.style.display = 'block';
                     }
-                } else
+                } else {
+                    loginMessage.textContent = 'Login successful but no role assigned.';
+                    loginMessage.style.display = 'block';
+                }
             }
     };
     //Open connection to server & send the post data using a POST request
