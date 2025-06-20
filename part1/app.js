@@ -8,5 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const dbConfig = {
   host: 'localhost',
-  
+  user: 'root',
+    password: 'root',
+    database: 'testdb'
 };
