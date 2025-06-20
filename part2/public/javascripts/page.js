@@ -184,7 +184,8 @@ function login() {
 
     xmlhttp.onreadystatechange = function() {
         const loginMessage = document.getElementById('loginMessage');
-        loginMessage. = '';
+        loginMessage.textContent = '';
+        loginMessage.style.display = 'none';
         if (this.status == 200) {
             try {
                 const response = JSON.parse(this.responseText);
