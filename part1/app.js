@@ -100,7 +100,11 @@ async function insertInitialData() {
             );
             await connection.execute(
                 'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
-                [3, '2025-06-10 8:00:00', 999, 'Parklands', 'open']
+                [4, '2025-06-10 8:00:00', 999, 'Parklands', 'open']
+            );
+            await connection.execute(
+                'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
+                [5, '2025-06-10 8:00:00', 999, 'Parklands', 'open']
             );
         }
 
