@@ -180,7 +180,7 @@ app.get('/api/walkers/summary', async (req, res) => {
                 JOIN
                     WalkRequests wr ON wa.request_id = wr.id
                 WHERE
-                    wa.walker_id = ? AND wr.status = 'completed';
+                    wa.walker_id = ? AND wr.status = 'accepted';
         }
     }
 });
