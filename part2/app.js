@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql2/promise'); // Using mysql2/promise for async/await support
 const session = require('express-session'); // Using express-session for session management
+const bodyParser = require('body-parser'); // Using body-parser for parsing request bodies
 const path = require('path');
 require('dotenv').config();
 
