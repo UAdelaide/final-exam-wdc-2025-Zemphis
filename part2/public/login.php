@@ -1,4 +1,5 @@
 <?php
 session_start();
 
-$conn = new mysqli("localhost", "root", "", "dogWalk"
+$conn = new mysqli("localhost", "root", "", "DogWalkService");
+
