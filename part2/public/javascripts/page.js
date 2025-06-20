@@ -205,10 +205,6 @@ function login() {
         } elseif (this.readyState == 4 && this.status >= 400) {
             alert("login failed");
         }
-
-        xmlhttp.open("POST", "/users/login", true);
-        xmlhttp.setRequestHeader("Content-type", "application/json");
-        xmlhttp.send(JSON.stringify(user));
     };
 
     xmlhttp.open("POST", "/users/login", true);
