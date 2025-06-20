@@ -8,9 +8,9 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(express.static()
+app.use(express.urlencoded({ extended: true }));
 
-app.
+app.use(session)
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
