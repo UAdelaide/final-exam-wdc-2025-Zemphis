@@ -20,11 +20,13 @@ if ($result->num_rows == 1) {
     $user = $result->fetch_assoc();
 
     // Verify the password
-    // Note: In a real application, it should use password_hash()  password_verify() for secure password handling
+    // Note: In a real application, it should use password_verify() for secure password handling
     if ($password === $user['password_hash']) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];
+
+        
     }
 }
 
