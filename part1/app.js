@@ -43,7 +43,8 @@ async function insertInitialData() {
             console.log('Database tables cleared');
 
             await connection.execute(
-                'INSERT INTO USERS (username, email, password_hash, role) VALUES ()'
+                'INSERT INTO USERS (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
+                ['walker1']
             )
         }
     }
