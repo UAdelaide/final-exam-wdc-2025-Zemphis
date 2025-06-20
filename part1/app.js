@@ -109,7 +109,7 @@ async function insertInitialData() {
             console.log('Initial walk requests inserted');
 
             await connection.commit();
-            console.log('Database initiali');
+            console.log('Database initialised');
         }
 
     }
