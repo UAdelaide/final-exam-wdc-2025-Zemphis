@@ -66,10 +66,10 @@ async function insertInitialData() {
             console.log('Initial data inserted');
 
             const [users] = await connection.execute('SELECT user_id FROM Users');
-            const [user]
+            const [userID] = users.map(user => user.user_id);
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
-                [aliceId, 'Max', 'medium']
+                [userID[0], 'Max', 'medium']
             );
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
