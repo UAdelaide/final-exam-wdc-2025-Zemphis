@@ -66,12 +66,7 @@ async function insertInitialData() {
             console.log('Initial data inserted');
 
             const [users] = await connection.execute('SELECT user_id FROM Users');
-            const aliceId = users.find(user => user.username === 'alice123').user_id;
-            const bobId = users.find(user => user.username === 'bobwalker').user_id;
-            const carolId = users.find(user => user.username === 'carol123').user_id;
-            const aId = users.find(user => user.username === 'a').user_id;
-            const bId = users.find(user => user.username === 'b').user_id;
-
+            const [user]
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
                 [aliceId, 'Max', 'medium']
