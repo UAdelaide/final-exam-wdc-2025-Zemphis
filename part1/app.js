@@ -105,9 +105,9 @@ async function insertInitialData() {
             const [bobDog] = await connection.execute('SELECT dog_id FROM Dogs WHERE name = ?', ['Bob']);
             const bobDogId = bobDog.length > 0 ? bobDog[0].dog_id : null;
             const [abu] = await connection.execute('SELECT dog_id FROM Dogs WHERE name = ?', ['Abu']);
-            const abuId = abu.length > 0 ? abu[0].id : null;
-            const [bren] = await connection.execute('SELECT id FROM Dogs WHERE name = ?', ['Bren']);
-            const brenId = bren.length > 0 ? bren[0].id : null;
+            const abuId = abu.length > 0 ? abu[0].dog_id : null;
+            const [bren] = await connection.execute('SELECT dog_id FROM Dogs WHERE name = ?', ['Bren']);
+            const brenId = bren.length > 0 ? bren[0].dog_id : null;
 
             await connection.execute(
                 'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
