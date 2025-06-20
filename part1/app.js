@@ -36,5 +36,8 @@ async function insertInitialData() {
         await connection.beginTransaction();
         try {
             await connection.execute('DELETE FROM WalkRatings');
+            await connection.execute('DELETE FROM Walks');
+            await connection.execute('DELETE FROM Dogs');
+            await connection.execute('DELETE FROM Owners');
         }
     }
