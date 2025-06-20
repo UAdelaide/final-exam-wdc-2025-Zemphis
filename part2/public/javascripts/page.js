@@ -200,7 +200,7 @@ function login() {
                         loginMessage.style.display = 'block';
                     }
                 } else {
-                    loginMessage.textContent = 'Login successful but no role assigned.';
+                    loginMessage.textContent = 'Server error.';
                     loginMessage.style.display = 'block';
                 }
             }
