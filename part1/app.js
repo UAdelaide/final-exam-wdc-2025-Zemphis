@@ -19,6 +19,6 @@ let pool;
 
 async function intialiseDatabase() {
     try {
-        pool =
+        pool = mysql.createPool(dbConfig);
     }
 }
