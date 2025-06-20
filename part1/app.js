@@ -125,3 +125,7 @@ async function insertInitialData() {
 
 
 app.get('/api/dogs', async (req, res) => {
+    try {
+        const 
+    }
+});
