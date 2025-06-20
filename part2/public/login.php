@@ -22,9 +22,7 @@ if ($result->num_rows == 1) {
     if ($password === $user['password_hash']) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
-        header("Location: ../index.php");
-    } else {
-        echo "Invalid password.";
+        $_SESSION['role'] = $user['role'];
     }
 }
 
