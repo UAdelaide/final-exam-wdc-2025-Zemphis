@@ -211,3 +211,10 @@ app.get('/api/walkers/summary', async (req, res) => {
         return res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+async function startServer() {
+    await intialiseDatabase();
+    await insertInitialData();
+
+    c
+}
