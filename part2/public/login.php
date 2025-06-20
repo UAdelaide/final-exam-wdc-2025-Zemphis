@@ -17,6 +17,8 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows == 1) {
-    $user = $
+    $user = $result->fetch_assoc();
+
+    
 }
 
