@@ -1,7 +1,6 @@
 var express = require('express');
 var mysql = require('mysql2/promise');
 var bodyParser = require('body-parser');
-const { startupSnapshot } = require('v8');
 var app = express();
 
 app.use(bodyParser.json());
