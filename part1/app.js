@@ -65,7 +65,8 @@ async function insertInitialData() {
             console.log('Initial data inserted');
 
             await connection.execute(
-                
+                'INSERT INTO Dogs (name, breed, age, owner_id) VALUES (?, ?, ?, ?)',
+                ['Buddy', 'Golden Retriever', 3, 1]
             );
         }
     }
