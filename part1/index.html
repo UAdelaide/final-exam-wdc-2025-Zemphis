@@ -48,7 +48,12 @@
                             this.loading = false;
                         }
                     },
-                    fetch
+                    fetchNewDogImage() {
+                        this.fetchDogImage();
+                    },
+                    showHiddenInfo() {
+                        this.hiddenInfo = !this.hiddenInfo;
+                    }
                 }
             });
         </script>
