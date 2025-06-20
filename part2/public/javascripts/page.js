@@ -202,12 +202,12 @@ function login() {
             } else {
                 window.location.href = 'walker-dashboard.html';
             }
-        } else {
+        } elseif {
             alert("login failed");
         }
     };
 
     xmlhttp.open("POST", "/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
-    xmlhttp.send(JSON.stringify(user)); 
+    xmlhttp.send(JSON.stringify(user));
 }
