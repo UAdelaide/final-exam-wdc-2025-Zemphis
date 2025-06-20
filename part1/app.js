@@ -157,5 +157,10 @@ app.get('/api/walkrequests/open', async (req, res) => {
         WHERE wr.status = 'open';
         `);
         res.json(rows);
-    } catch
+    } catch (error) {
+        console.error('Error fetching open walk requests:', error);
+        return res.status(500).json({ error: 'Internal server error' });
+    }
 });
+
+app.get('/api/walkrequests/accepted', async (req, res) => {
