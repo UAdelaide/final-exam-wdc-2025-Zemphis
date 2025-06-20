@@ -116,8 +116,9 @@ async function insertInitialData() {
             console.error('Error inserting initial data:', error);
             throw error;
         } finally {
-            if connection.release();
+            if (connection) connection.release();
         }
+        
 
     }
 }
