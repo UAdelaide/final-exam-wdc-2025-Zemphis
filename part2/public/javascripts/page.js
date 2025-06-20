@@ -173,18 +173,6 @@ function downvote(index) {
     updatePosts();
 }
 
-
-function logout(){
-
-    // Create AJAX Request
-    var xmlhttp = new XMLHttpRequest();
-
-    // Open connection to server & send the post data using a POST request
-    xmlhttp.open("POST", "/users/logout", true);
-    xmlhttp.send();
-
-}
-
 function login() {
     let user = {
         user: document.getElementById('username').value,
@@ -210,4 +198,17 @@ function login() {
     xmlhttp.open("POST", "/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
     xmlhttp.send(JSON.stringify(user));
+}
+
+
+
+function logout(){
+
+    // Create AJAX Request
+    var xmlhttp = new XMLHttpRequest();
+
+    // Open connection to server & send the post data using a POST request
+    xmlhttp.open("POST", "/users/logout", true);
+    xmlhttp.send();
+
 }
