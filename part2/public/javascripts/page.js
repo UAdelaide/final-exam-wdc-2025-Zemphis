@@ -225,8 +225,8 @@ function login() {
         if (this.readyState == 4 && this.status == 200) {
             const response = JSON.parse(this.responseText);
             if (response.role == 'owner') {
-                
-            }
+                window.location.href = 'owner-hasboard.html';
+            } else 
         }
     }
 }
