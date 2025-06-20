@@ -127,12 +127,12 @@ async function insertInitialData() {
 app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await pool.execute(`
-            SELECT
+        SELECT
             d.name AS dog_name,
             d.size,
             u.username AS owner_username
-            FROM Dogs d
-            JOIN Users u ON d.owner_id = u.id;`
+        FROM Dogs d
+        JOIN Users u ON d.owner_id = u.id;`
 );
     } catch (error) {
         console.error('Error fetching dogs:', error);
