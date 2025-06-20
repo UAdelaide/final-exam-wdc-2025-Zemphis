@@ -188,7 +188,9 @@ function login() {
                 const response = JSON.parse(this.responseText);
                 console.log(response);
                 if (response && response.role) {
-                    if (response.role === 'owner') {}
+                    if (response.role === 'owner') {
+                        window.location.href = 'owner-dashboard.html';
+                    }
                 }
             }
     };
