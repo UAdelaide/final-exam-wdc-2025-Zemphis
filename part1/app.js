@@ -65,7 +65,8 @@ async function insertInitialData() {
             );
             console.log('Initial data inserted');
 
-            const []
+            const [alice] = await connection.execute('SELECT id FROM Users WHERE username = ?', ['alice123']);
+            
 
             await connection.execute(
                 'INSERT INTO Dogs (owner_id, name, size) VALUES (?, ?, ?)',
