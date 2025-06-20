@@ -56,7 +56,11 @@ async function insertInitialData() {
             );
             await connection.execute(
                 'INSERT INTO USERS (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
-                ['a', 'a@example.com', 'a', 'w' ]
+                ['a', 'a@example.com', 'a', 'walker']
+            );
+            await connection.execute(
+                'INSERT INTO USERS (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
+                ['b', 'a@example.com', 'a', 'walker']
             );
         }
     }
