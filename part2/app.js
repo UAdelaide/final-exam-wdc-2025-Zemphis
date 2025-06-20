@@ -20,4 +20,5 @@ app.use('/api/users', userRoutes);
 // Export the app instead of listening here
 module.exports = app;
 
-app.post('/login')
+app.post('/users/login', (req, res) => {
+    
