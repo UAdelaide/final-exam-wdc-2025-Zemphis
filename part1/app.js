@@ -118,7 +118,6 @@ async function insertInitialData() {
         } finally {
             if (connection) connection.release();
         }
-        
-
+        catc
     }
 }
