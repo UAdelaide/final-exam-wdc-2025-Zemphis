@@ -1,6 +1,5 @@
 const express = require('express');
 const expressSession = require('express-session');
-const bcrypt = require('bcryptjs');
 const path = require('path');
 require('dotenv').config();
 
@@ -33,7 +32,7 @@ function isAuthenticated(req, res, next) {
 app.post('/users/login', async (req, res) => {
     const { user, pass } = req.body;
     try {
-        const [rows] = await pool.query('SELECT username, password_hash, role FROM Users WHERE username = ?', [user, pass]);
+        const [rows] = await pool.query('SELECT username, password_hash, role FROM Users WHERE username = ?', [user]);
         if (rows.length > 0) {
             req.session.user = rows[0];
             res.json({ role: rows[0].role });
