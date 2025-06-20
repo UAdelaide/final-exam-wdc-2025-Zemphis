@@ -106,6 +106,9 @@ async function insertInitialData() {
                 'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
                 [5, '2025-06-10 8:00:00', 999, 'Parklands', 'open']
             );
+            console.log('Initial walk requests inserted');
+
+            
         }
 
     }
