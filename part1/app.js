@@ -186,6 +186,14 @@ app.get('/api/walkers/summary', async (req, res) => {
 
             const [ratingSummary] = await pool.execute(`
                 SELECT
+                    AVG(wr.rating) AS average_rating,
+                    COUNT(wr.rating) AS total_ratings
+                FROM
+                    WalkRatings wr
+                JOIN
+                    WalkApplications wa ON wr.application_id = wa.id
+                WHERE
+                    wa.walker_id = ?;
         }
     }
 });
