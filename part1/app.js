@@ -66,7 +66,7 @@ async function insertInitialData() {
             console.log('Initial data inserted');
 
             const [alice] = await connection.execute('SELECT id FROM Users WHERE username = ?', ['alice123']);
-            const aliceId = alice.length > 0 ? alice[0].id : null;
+            const aliceId = alice.length > 0 ? alice[0].user_id : null;
             const [bob] = await connection.execute('SELECT id FROM Users WHERE username = ?', ['bobwalker']);
             const bobId = bob.length > 0 ? bob[0].id : null;
             const [carol] = await connection.execute('SELECT id FROM Users WHERE username = ?', ['carol123']);
