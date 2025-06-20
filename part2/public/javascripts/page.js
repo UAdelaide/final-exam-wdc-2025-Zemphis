@@ -190,6 +190,10 @@ function login() {
                 if (response && response.role) {
                     if (response.role === 'owner') {
                         window.location.href = 'owner-dashboard.html';
+                    } else if (response.role === 'walker') {
+                        window.location.href = 'walker-dashboard.html';
+                    } else {
+                        alert('Login successful, but no valid role found.');
                     }
                 }
             }
