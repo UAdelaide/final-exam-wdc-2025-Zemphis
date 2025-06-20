@@ -62,5 +62,6 @@ async function insertInitialData() {
                 'INSERT INTO USERS (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
                 ['b', 'b@example.com', 'b', 'owner']
             );
+            console.log('Initial data inserted');
         }
     }
