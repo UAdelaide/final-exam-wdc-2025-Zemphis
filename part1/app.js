@@ -140,3 +140,5 @@ app.get('/api/dogs', async (req, res) => {
         return res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+app.get('/api/walk-requests', async (req, res) => {
