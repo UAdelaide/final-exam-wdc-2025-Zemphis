@@ -65,7 +65,7 @@ async function insertInitialData() {
             console.log('Initial data inserted');
 
             await connection.execute(
-                
+                'INSERT INTO '
             );
     }
 }
