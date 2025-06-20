@@ -16,5 +16,7 @@ $stmt->bind_param("s", $username);
 $stmt->execute();
 $result = $stmt->get_result();
 
-if ($result->num_rows == 1)
+if ($result->num_rows == 1) {
+    $user = $
+}
 
