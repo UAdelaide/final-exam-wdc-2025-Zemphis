@@ -125,13 +125,3 @@ async function insertInitialData() {
 
 
 app.get('/api/dogs', async (req, res) => {
-    try {
-        const connection = await pool.getConnection();
-        const [rows] = await connection.query('SELECT * FROM Dogs');
-        res.json(rows);
-        connection.release();
-    } catch (error) {
-        console.error('Error fetching dogs:', error);
-        res.status(500).json({ error: 'Internal server error' });
-    }
-}
