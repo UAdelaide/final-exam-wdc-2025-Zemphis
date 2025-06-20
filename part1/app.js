@@ -1,6 +1,7 @@
 var express = require('express');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
+const { startupSnapshot } = require('v8');
 var app = express();
 
 app.use(bodyParser.json());
@@ -224,3 +225,5 @@ async function startServer() {
         console.log('- http://localhost:3000/api/walkers/summary');
     }
 }
+
+startupSnapshot()
