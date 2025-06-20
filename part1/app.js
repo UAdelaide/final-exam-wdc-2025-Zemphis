@@ -126,6 +126,6 @@ async function insertInitialData() {
 
 app.get('/api/dogs', async (req, res) => {
     try {
-        const 
+        const [rows] = await pool.query('SELECT * FROM Dogs');
     }
 });
