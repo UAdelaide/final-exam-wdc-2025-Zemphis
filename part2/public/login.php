@@ -34,6 +34,9 @@ if ($result->num_rows == 1) {
         } else {
             header("Location: index.html");
         }
-    } 
+        exit;
+    } else {
+        echo "Invalid password.";
+    }
 }
 
