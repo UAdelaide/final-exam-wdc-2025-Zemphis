@@ -19,6 +19,12 @@ $result = $stmt->get_result();
 if ($result->num_rows == 1) {
     $user = $result->fetch_assoc();
 
-    if ($password === $user['password_hash'])
+    if ($password === $user['password_hash']) {
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        header("Location: ../index.php");
+    } else {
+        echo "Invalid password.";
+    }
 }
 
