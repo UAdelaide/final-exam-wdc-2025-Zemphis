@@ -1,4 +1,4 @@
-//ummm I am unsure as to why the auto commit is not working, so I will just
+//ummm I am unsure as to why the auto commit is not working, so I will just commit manually
 var express = require('express');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
