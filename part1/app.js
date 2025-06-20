@@ -203,7 +203,7 @@ app.get('/api/walkers/summary', async (req, res) => {
                 JOIN
                     WalkRequests wr ON wa.request_id = wr.request_id
                 WHERE
-                    wa.user_id = ? AND wr.status = 'accepted' AND wa.status = 'completed';
+                    wa.walker_id = ? AND wa.status = 'accepted' AND wr.status = 'completed';
             `, [walker_id]);
             const completed_walks = compltedWalks[0].completed_walks || 0;
 
