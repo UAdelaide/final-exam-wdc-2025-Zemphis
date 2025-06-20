@@ -7,3 +7,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$s
