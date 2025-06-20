@@ -213,7 +213,7 @@ app.get('/api/walkers/summary', async (req, res) => {
     }
 });
 
-async function startServer() {
+async function startApp() {
     await intialiseDatabase();
     await insertInitialData();
 
@@ -226,4 +226,4 @@ async function startServer() {
     }
 }
 
-startupSnapshot()
+startApp();
