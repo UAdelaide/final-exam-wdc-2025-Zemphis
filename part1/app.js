@@ -86,7 +86,7 @@ async function insertInitialData() {
             );
             console.log('Initial dog data inserted');
 
-            const
+            await.connection.execute(
 
     }
 }
