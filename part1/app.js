@@ -30,4 +30,7 @@ async function intialiseDatabase() {
     }
 }
 
-async function insertIn
+async function insertInitialData() {
+    try {
+        const connection = await pool.getConnection();
+        await connection.query('INSERT INTO Users (name, email) VALUES (?, ?)', ['Alice', '
