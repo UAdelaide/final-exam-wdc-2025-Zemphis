@@ -202,7 +202,7 @@ function login() {
             } else {
                 window.location.href = 'walker-dashboard.html';
             }
-        } elseif (this.readyState == 4 && this.status == 401) {
+        } elseif (this.readyState == 4 && this.status >= 400) {
             alert("login failed");
         }
     };
