@@ -19,7 +19,13 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+function isAuthenticated(req, res, next) {
+    if (req.session && req.session.user) {
+        return next();
+    } else {
+        res.status(401).send('Unauthorized');
+    }
+}
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
