@@ -200,15 +200,10 @@ function login() {
                         loginMessage.style.display = 'block';
                     }
                 } else {
-                    loginMessage.textContent = 'Role infomation missing.';
+                    loginMessage.textContent = 'Role information missing.';
                     loginMessage.style.display = 'block';
                 }
-            } catch (e) {
-                console.error('Error parsing response:', e);
-                loginMessage.textContent = 'Server error.';
-                loginMessage.style.display = 'block';
             }
-        
     };
     //Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/users/login", true);
