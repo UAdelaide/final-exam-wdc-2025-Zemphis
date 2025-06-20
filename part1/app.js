@@ -52,15 +52,15 @@ async function insertInitialData() {
                 ['bobwalker', 'bob@example.com', 'hashed456', 'walker']
             );
             await connection.execute(
-                'INSERT INTO USERS (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
+                'INSERT INTO Users (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
                 ['carol123', 'carol@exmample.com', 'hashed789', 'owner']
             );
             await connection.execute(
-                'INSERT INTO USERS (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
+                'INSERT INTO Users (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
                 ['a', 'a@example.com', 'a', 'walker']
             );
             await connection.execute(
-                'INSERT INTO USERS (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
+                'INSERT INTO Users (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
                 ['b', 'b@example.com', 'b', 'owner']
             );
             console.log('Initial data inserted');
