@@ -127,7 +127,7 @@ async function insertInitialData() {
             );
             await connection.execute(
                 'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
-                [bre, '2025-06-10 8:00:00', 999, 'Parklands', 'open']
+                [brenId, '2025-06-10 8:00:00', 999, 'Parklands', 'open']
             );
             console.log('Initial walk requests inserted');
 
