@@ -183,16 +183,8 @@ function login() {
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            const response = JSON.parse(this.responseText);
-            if (response.role == 'owner') {
-                window.location.href = 'owner-dasboard.html';
-            } else {
-                window.location.href = 'walker-dashboard.html';
-            }
-        } else if (this.readyState == 4 && this.status >= 400) {
-            alert("login failed");
-        }
+        if (this.status == 200) {
+            
     };
     //Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/users/login", true);
