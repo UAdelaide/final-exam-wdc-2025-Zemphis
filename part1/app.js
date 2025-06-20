@@ -87,7 +87,7 @@ async function insertInitialData() {
             console.log('Initial dog data inserted');
 
             await connection.execute(
-                
+                'INSERT INTO WalkRequests '
             );
 
     }
