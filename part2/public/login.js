@@ -8,3 +8,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname)));
+
+const db = mysql.createConnection({
+  host: 'localhost',
+  user
