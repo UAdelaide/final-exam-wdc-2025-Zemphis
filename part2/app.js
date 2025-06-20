@@ -22,4 +22,6 @@ module.exports = app;
 
 app.post('/users/login', (req, res) => {
     const { user, pass } = req.body;
+
+    debug.query
 });
