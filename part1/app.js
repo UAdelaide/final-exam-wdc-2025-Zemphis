@@ -182,7 +182,8 @@ app.get('/api/walkers/summary', async (req, res) => {
                 WHERE
                     wa.walker_id = ? AND wr.status = 'accepted' AND wa.status = 'completed';
             `, [walker_id]);
-            const completed_walks = compltedWalks[0].completed_walks || 0
+            const completed_walks = compltedWalks[0].completed_walks || 0;
+            
         }
     }
 });
