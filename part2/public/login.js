@@ -7,4 +7,4 @@ const app = express();
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 
-app.use
+app.use(express.static(path.join(__dirname)));
