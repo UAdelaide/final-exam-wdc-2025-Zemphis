@@ -174,7 +174,8 @@ app.get('/api/walkers/summary', async (req, res) => {
 
             const [compltedWalks] = await pool.execute(`
                 SELECT
-                    COUNT(wa)
+                    COUNT(wa.request_id) AS completed_walks
+                    
         }
     }
 });
