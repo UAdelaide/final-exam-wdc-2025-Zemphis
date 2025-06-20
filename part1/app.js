@@ -30,4 +30,4 @@ async function intialiseDatabase() {
     }
 }
 
-as
+async function insert
