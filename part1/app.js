@@ -98,7 +98,7 @@ async function insertInitialData() {
             );
             console.log('Initial dog data inserted');
 
-            const [dogs] = await connection.execute('SELECT id FROM Dogs');
+            const [dogs] = await connection.execute('SELECT dog_id FROM Dogs');
             const dogIds = dogs.map(dog => dog.id);
 
             await connection.execute(
