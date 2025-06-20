@@ -98,6 +98,7 @@ async function insertInitialData() {
             );
             console.log('Initial dog data inserted');
 
+
             await connection.execute(
                 'INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (?, ?, ?, ?, ?)',
                 [1, '2025-06-10 08:00:00', 30, 'Parklands', 'open']
