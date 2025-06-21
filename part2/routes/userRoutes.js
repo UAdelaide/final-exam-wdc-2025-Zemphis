@@ -39,8 +39,9 @@ router.get('/me', (req, res) => {
 // POST login
 router.post('/login', async(req, res) => {
   const { username, password } = req.body;
-  const query = 'SELECT * FROM Users WHERE username = ?'
+  const query = 'SELECT * FROM Users WHERE username = ?';
   db.get(db.query, [username], async (err, user) => {
+    db.get(qy)
   });
 });
 
