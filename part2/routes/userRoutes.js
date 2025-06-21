@@ -42,7 +42,8 @@ router.post('/login', async(req, res) => {
   db.get(db.query, [username], async (err, user) => {
     if (err) return res.status(500).send('Server Error');
     if (!user) return res.status(401).send('User not found');
-    const match = await bcrypt.compare(password,)
+
+    if (password)
   });
 });
 
