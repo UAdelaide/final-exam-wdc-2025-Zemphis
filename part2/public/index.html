@@ -37,7 +37,7 @@
       },
       methods: {
         async login() {
-          try {
+
             const res = await fetch('/userRoutes/login', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -53,8 +53,8 @@
             }
           }
         }
-      }
-    }
+      };
+
     createApp({
       data() {
         return {
