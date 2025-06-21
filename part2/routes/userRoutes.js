@@ -62,7 +62,7 @@ router.post('/login', async(req, res) => {
       role: user.role
     };
 
-    console.log('DB query complete')
+    console.log('session for', req.session.user);
     if (user.role === 'owner') {
       res.redirect('/owner');
     } else {
