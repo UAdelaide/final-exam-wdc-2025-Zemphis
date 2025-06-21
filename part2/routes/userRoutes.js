@@ -52,7 +52,10 @@ router.post('/login', async(req, res) => {
       return res.status(401).send('Invalid passowrd');
     }
 
-    req.session.user = 
+    req.session.user = {
+      id: user.user_id,
+      username: user.u
+    }
 
   } catch (err) {
     console.error('Login error:', err);
