@@ -57,7 +57,7 @@ router.post('/login', async(req, res) => {
     } else if (user.role === 'walker') {
       res.redirect('/walker');
     } else {
-      
+      res.status(400).send('IDK role bruh');
     }
   });
 });
