@@ -49,7 +49,9 @@ router.post('/login', async(req, res) => {
     const user = rows[0];
 
 
-  } catch {}
+  } catch (err) {
+    console.error('Login error:')
+  }
 });
 
 module.exports = router;
