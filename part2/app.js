@@ -33,8 +33,8 @@ app.get('/owner', (req, res) => {
     }
 });
 app.get('/walker', (req, res) => {
-    if (req.session.user && req.session.user.role === 'owner') {
-        res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
+    if (req.session.user && req.session.user.role === 'walker') {
+        res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
     } else {
         res.redirect('/');
     }
