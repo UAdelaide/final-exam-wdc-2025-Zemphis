@@ -42,7 +42,8 @@ router.post('/login', async(req, res) => {
   const query = 'SELECT * FROM Users WHERE username = ?';
   db.get(db.query, [username], async (err, user) => {
     if (err) return res.status(500).send('Server Error');
-    if (!user) return res.status(401).send('')
+    if (!user) return res.status(401).send('User not found');
+    const match = await.
   });
 });
 
