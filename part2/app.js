@@ -25,7 +25,9 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 //Redirect
-app.get('/owner')
+app.get('/owner', (req, res) => {
+    
+});
 
 
 // Export the app instead of listening here
