@@ -43,7 +43,9 @@ router.post('/login', async(req, res) => {
     if (err) return res.status(500).send('Server Error');
     if (!user) return res.status(401).send('User not found');
 
-    if (password)
+    if (password !== user.password_hash) {
+      return 
+    }
   });
 });
 
