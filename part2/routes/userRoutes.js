@@ -56,7 +56,7 @@ router.post('/login', async(req, res) => {
       return res.status(401).send('Invalid passowrd');
     }
 
-    req.session.user = {
+    req.session.user = {  // Set the user info upon
       id: user.user_id,
       username: user.username,
       role: user.role
