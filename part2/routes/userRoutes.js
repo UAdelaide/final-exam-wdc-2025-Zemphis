@@ -87,7 +87,7 @@ router.get('/logout', (req, res) => {
       return res.status(500).send('Could not log out idk');
 
     }
-    res.clearCookie('connect.sid'); //clears cookies and redirects to 
+    res.clearCookie('connect.sid'); //clears cookies and redirects to home page
     res.redirect('/');
   });
 });
