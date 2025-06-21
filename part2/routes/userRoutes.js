@@ -41,7 +41,8 @@ router.post('/login', async(req, res) => {
   const { username, password } = req.body;
   const query = 'SELECT * FROM Users WHERE username = ?';
   db.get(db.query, [username], async (err, user) => {
-    if (err) return res.status(500).send
+    if (err) return res.status(500).send('Server Error');
+    
   });
 });
 
