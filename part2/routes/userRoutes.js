@@ -81,6 +81,8 @@ router.post('/login', async(req, res) => {
 });
 
 route.get('/logout', (req, res) => {
-  req.ses.destroy((err) => {});
+  req.ses.destroy((err) => {
+    
+  });
 });
 module.exports = router;
