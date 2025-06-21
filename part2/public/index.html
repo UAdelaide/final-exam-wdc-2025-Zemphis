@@ -47,7 +47,7 @@
             const data = await res.json();
 
             if (res.ok && data.user) {
-              this.$emit('login-success', { message: data})
+              this.$emit('login-success', { message: data.message, user: data.user});
             }
           }
         }
