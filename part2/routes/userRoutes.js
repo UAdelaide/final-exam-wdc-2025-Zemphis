@@ -44,14 +44,14 @@ router.post('/login', async(req, res) => {
     const [rows] = await db.query('SELECT * FROM Users WHERE username= ?', [username]); // Query the db to find user
     console.log('DB query complete');
 
-    if (rows.length === 0 ) { //
+    if (rows.length === 0 ) { //If no user is found
       console.log('User no found');
       return res.status(401).send('User not found');
     }
 
     const user = rows[0];
 
-    if (password !== user.password_hash) {
+    if (password !== user.password_hash) { //Compare password with stored hash
       console.log('X password');
       return res.status(401).send('Invalid passowrd');
     }
