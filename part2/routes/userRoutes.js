@@ -44,7 +44,7 @@ router.post('/login', async(req, res) => {
     if (!user) return res.status(401).send('User not found');
 
     if (password !== user.password_hash) {
-      return 
+      return res.status(401).send('Invalid password');
     }
   });
 });
