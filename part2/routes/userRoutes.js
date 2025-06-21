@@ -48,7 +48,7 @@ router.post('/login', async(req, res) => {
 
     const user = rows[0];
 
-
+    if (password !== )
   } catch (err) {
     console.error('Login error:', err);
     res.status(500).send('Server error');
