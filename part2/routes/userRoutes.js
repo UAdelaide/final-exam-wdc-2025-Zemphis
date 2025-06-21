@@ -43,9 +43,13 @@ router.post('/login', async(req, res) => {
     const [rows] = await db.query('SELECT * FROM Users WHERE username= ?', [username]);
 
     if (rows.length === 0 ) {
-      return res.status(401).send('User not found')
+      return res.status(401).send('User not found');
     }
-  }
+
+    const user = rows[0];
+
+
+  } catch {}
 });
 
 module.exports = router;
