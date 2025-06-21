@@ -84,8 +84,10 @@ route.get('/logout', (req, res) => {
   req.ses.destroy((err) => {
     if (err) {
       console.error('Logout err:', err);
-      return res.status(500).send('Could not log out')
+      return res.status(500).send('Could not log out idk');
+
     }
+    res.clear
   });
 });
 module.exports = router;
