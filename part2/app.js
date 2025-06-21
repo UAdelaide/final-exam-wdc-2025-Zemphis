@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
-    secret: "secret-key",
+    secret: "test",
     resave: false,
     saveUninitialized: true,
     cookie: {secure: false}
