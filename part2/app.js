@@ -18,13 +18,6 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-function isAuthenticated(req, res, next) {
-    if (req.session && req.session.user) {
-        next();
-    } else {
-        res.status(401).json({ error: 'Unauthorized' });
-    }
-}
 
 // Routes
 
