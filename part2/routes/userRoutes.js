@@ -73,7 +73,7 @@ router.post('/login', async(req, res) => {
     }
 
   } catch (err) {
-    console.log('DB query complete')
+    console.log('Login err');
     console.error('Login error:', err);
     res.status(500).send('Server error');
   }
