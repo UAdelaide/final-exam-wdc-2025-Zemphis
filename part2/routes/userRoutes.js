@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 
-// query all users (for admin/testing)
-router.query('/', async (req, res) => {
+// GET all users (for admin/testing)
+router.get('/', async (req, res) => {
   try {
     const [rows] = await db.query('SELECT user_id, username, email, role FROM Users');
     res.json(rows);
@@ -28,7 +28,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.query('/me', (req, res) => {
+router.get('/me', (req, res) => {
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not logged in' });
   }
@@ -39,7 +39,7 @@ router.query('/me', (req, res) => {
 router.post('/login', async(req, res) => {
   const { username, password } = req.body;
   const query = 'SELECT * FROM Users WHERE username = ?';
-  db.query(db.query, [username], async (err, user) => {
+  db.get(db.query, [username], async (err, user) => {
     if (err) return res.status(500).send('Server Error');
     if (!user) return res.status(401).send('User not found');
 
