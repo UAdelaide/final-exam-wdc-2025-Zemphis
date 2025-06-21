@@ -29,7 +29,7 @@ app.get('/owner', (req, res) => {
     if (req.session.user && req.session.user.role === 'owner') {
         res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
     } else {
-        res.redirect('/')
+        res.redirect('/');
     }
 });
 
