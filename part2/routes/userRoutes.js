@@ -38,21 +38,21 @@ router.get('/me', (req, res) => {
 // POST login
 router.post('/login', async(req, res) => {
   const { username, password } = req.body;
-  console.log('Login attempt', username)
+  console.log('Login attempt', username);
 
   try {
     const [rows] = await db.query('SELECT * FROM Users WHERE username= ?', [username]);
-    console.log('DB query complete')
+    console.log('DB query complete');
 
     if (rows.length === 0 ) {
-      console.log('User no found')
+      console.log('User no found');
       return res.status(401).send('User not found');
     }
 
     const user = rows[0];
 
     if (password !== user.password_hash) {
-      console.log('X password')
+      console.log('X password');
       return res.status(401).send('Invalid passowrd');
     }
 
@@ -63,6 +63,7 @@ router.post('/login', async(req, res) => {
     };
 
     console.log('session for', req.session.user);
+    
     if (user.role === 'owner') {
       res.redirect('/owner');
     } else {
