@@ -51,7 +51,8 @@ router.post('/login', async(req, res) => {
       username = user.username,
       role: user.role
     };
-    
+
+    if (user.role)
   });
 });
 
