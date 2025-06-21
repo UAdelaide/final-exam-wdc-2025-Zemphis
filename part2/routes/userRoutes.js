@@ -36,6 +36,8 @@ router.get('/me', (req, res) => {
 });
 
 // POST login
-router.post('/login', )
+router.post('/login', async(req, res) => {
+  db.get
+})
 
 module.exports = router;
