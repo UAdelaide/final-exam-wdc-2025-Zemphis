@@ -26,7 +26,7 @@ app.use('/api/users', userRoutes);
 
 //Redirect
 app.get('/owner', (req, res) => {
-    
+    if (req.session.user &&)
 });
 
 
