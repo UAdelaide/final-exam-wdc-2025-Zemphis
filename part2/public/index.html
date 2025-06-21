@@ -44,7 +44,9 @@
               body: JSON.stringify({ username: this.username, password: this.password }),
               credentials: 'include'
             });
-            const data = await.res.json();
+            const data = await res.json();
+
+            if (res.ok && data.)
           }
         }
       }
