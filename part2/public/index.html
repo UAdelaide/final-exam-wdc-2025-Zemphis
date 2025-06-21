@@ -38,7 +38,11 @@
       methods: {
         async login() {
           try {
-            
+            const res = await fetch('/userRoutes.js/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ username: this.username, password: this.password })
+            });
           }
         }
       }
