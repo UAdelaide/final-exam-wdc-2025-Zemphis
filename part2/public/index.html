@@ -35,22 +35,7 @@
       data() {
         return {username: '', password: ''};
       },
-      methods: {
-        async login() {
-            const res = await fetch('/userRoutes/login', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ username: this.username, password: this.password }),
-              credentials: 'include'
-            });
-            const data = await res.json();
 
-            if (res.ok && data.user) {
-              this.$emit('login-success', { message: data.message, user: data.user});
-            } else {
-              this.$emit('login-success', { message: data.message, user: null});
-            }
-          }
         }
       };
 
