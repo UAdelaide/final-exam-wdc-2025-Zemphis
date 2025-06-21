@@ -45,13 +45,14 @@ router.post('/login', async(req, res) => {
     console.log('DB query complete')
 
     if (rows.length === 0 ) {
-      console.log('DB query complete')
+      console.log('User no found')
       return res.status(401).send('User not found');
     }
 
     const user = rows[0];
 
     if (password !== user.password_hash) {
+      console.log('X password')
       return res.status(401).send('Invalid passowrd');
     }
 
@@ -60,6 +61,8 @@ router.post('/login', async(req, res) => {
       username: user.username,
       role: user.role
     };
+
+    console.log('DB query complete')
     if (user.role === 'owner') {
       res.redirect('/owner');
     } else {
