@@ -47,7 +47,9 @@ router.post('/login', async(req, res) => {
       return res.status(401).send('Invalid password');
     }
     req.session.user = {
-      id: user
+      id: user.user_id,
+      username = user.username,
+      
     }
   });
 });
