@@ -31,7 +31,10 @@
   <script>
     const { createApp } = Vue;
     const LoginComponent = {
-      props: ['message']
+      props: ['message'],
+      data() {
+        return {username }
+      }
     }
     createApp({
       data() {
