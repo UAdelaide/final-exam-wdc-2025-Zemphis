@@ -38,28 +38,10 @@ router.get('/me', (req, res) => {
 // POST login
 router.post('/login', async(req, res) => {
   const { username, password } = req.body;
-  const query = 'SELECT * FROM Users WHERE username = ?';
-  db.query(query, [username], async (err, user) => {
-    if (err) return res.status(500).send('Server Error');
-    if (!user) return res.status(401).send('User not found');
 
-    if (password !== user.password_hash) {
-      return res.status(401).send('Invalid password');
-    }
-    req.session.user = {
-      id: user.user_id,
-      username: user.username,
-      role: user.role
-    };
-
-    if (user.role === 'owner') {
-      res.redirect('/owner');
-    } else if (user.role === 'walker') {
-      res.redirect('/walker');
-    } else {
-      res.status(400).send('IDK role bruh');
-    }
-  });
+  try {
+    const [rows]
+  }
 });
 
 module.exports = router;
