@@ -32,6 +32,13 @@ app.get('/owner', (req, res) => {
         res.redirect('/');
     }
 });
+app.get('/walker', (req, res) => {
+    if (req.session.user && req.session.user.role === 'owner') {
+        res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
+    } else {
+        res.redirect('/');
+    }
+});
 
 
 // Export the app instead of listening here
