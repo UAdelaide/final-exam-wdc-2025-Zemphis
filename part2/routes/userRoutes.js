@@ -69,10 +69,11 @@ router.post('/login', async(req, res) => {
       console.log('Owner redirect');
     } else {
       res.redirect('/walker');
-      console.log('DB query complete');
+      console.log('Walker redirect');
     }
 
   } catch (err) {
+    console.log('DB query complete')
     console.error('Login error:', err);
     res.status(500).send('Server error');
   }
