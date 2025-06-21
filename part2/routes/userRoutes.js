@@ -57,9 +57,11 @@ router.post('/login', async(req, res) => {
       username: user.username,
       role: user.role
     };
-    if (user.roke === 'owner') {
+    if (user.role === 'owner') {
       res.redirect('/owner');
-    } else if
+    } else {
+      
+    }
 
   } catch (err) {
     console.error('Login error:', err);
