@@ -42,9 +42,10 @@ router.post('/login', async(req, res) => {
 
   try {
     const [rows] = await db.query('SELECT * FROM Users WHERE username= ?', [username]);
-    console.log
+    console.log('DB query complete')
 
     if (rows.length === 0 ) {
+      console.log('DB query complete')
       return res.status(401).send('User not found');
     }
 
