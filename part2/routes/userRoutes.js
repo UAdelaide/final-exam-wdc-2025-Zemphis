@@ -41,10 +41,10 @@ router.post('/login', async(req, res) => {
   console.log('Login attempt', username);
 
   try {
-    const [rows] = await db.query('SELECT * FROM Users WHERE username= ?', [username]); // 
+    const [rows] = await db.query('SELECT * FROM Users WHERE username= ?', [username]); //
     console.log('DB query complete');
 
-    if (rows.length === 0 ) {
+    if (rows.length === 0 ) { //
       console.log('User no found');
       return res.status(401).send('User not found');
     }
