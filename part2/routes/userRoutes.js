@@ -36,5 +36,6 @@ router.get('/me', (req, res) => {
 });
 
 // POST login
-router.post()
+router.post('/login', )
+
 module.exports = router;
