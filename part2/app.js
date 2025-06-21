@@ -1,7 +1,6 @@
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
-const cookieParser = require('cookie-parser')
 require('dotenv').config();
 
 const db = require('./models/db'); // Import the database pool
