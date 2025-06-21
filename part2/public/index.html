@@ -49,7 +49,7 @@
             if (res.ok && data.user) {
               this.$emit('login-success', { message: data.message, user: data.user});
             } else {
-              this.
+              this.$emit('login-success', { message: data})
             }
           }
         }
