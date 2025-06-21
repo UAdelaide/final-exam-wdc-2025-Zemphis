@@ -3,7 +3,6 @@ const session = require('express-session');
 const path = require('path');
 require('dotenv').config();
 
-const db = require('./models/db'); // Import the database pool
 const app = express();
 
 // Middleware
