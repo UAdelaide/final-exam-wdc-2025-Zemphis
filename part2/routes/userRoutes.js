@@ -52,7 +52,9 @@ router.post('/login', async(req, res) => {
       role: user.role
     };
 
-    if (user.role)
+    if (user.role === 'owner') {
+      
+    }
   });
 });
 
