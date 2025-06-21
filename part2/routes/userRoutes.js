@@ -63,11 +63,13 @@ router.post('/login', async(req, res) => {
     };
 
     console.log('session for', req.session.user);
-    
+
     if (user.role === 'owner') {
       res.redirect('/owner');
+      console.log('Owner redirect');
     } else {
       res.redirect('/walker');
+      console.log('DB query complete');
     }
 
   } catch (err) {
