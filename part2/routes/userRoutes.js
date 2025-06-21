@@ -81,13 +81,13 @@ router.post('/login', async(req, res) => {
 });
 
 router.get('/logout', (req, res) => {
-  req.session.destroy((err) => {
+  req.session.destroy((err) => { //destroy session
     if (err) {
       console.error('Logout err:', err);
       return res.status(500).send('Could not log out idk');
 
     }
-    res.clearCookie('connect.sid');
+    res.clearCookie('connect.sid'); //clears cookies and redirects to 
     res.redirect('/');
   });
 });
