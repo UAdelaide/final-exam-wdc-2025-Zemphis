@@ -87,7 +87,8 @@ route.get('/logout', (req, res) => {
       return res.status(500).send('Could not log out idk');
 
     }
-    res.clear
+    res.clearCookie('connect.sid');
+    res.redirect('/');
   });
 });
 module.exports = router;
