@@ -173,54 +173,32 @@ function downvote(index) {
     updatePosts();
 }
 
-function login() {
+
+function login(){
+
     let user = {
         user: document.getElementById('username').value,
         pass: document.getElementById('password').value
-    }
+    };
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
 
+    // Define function to run on response
     xmlhttp.onreadystatechange = function() {
-        const loginMessage = document.getElementById('loginMessage');
-        loginMessage.textContent = '';
-        loginMessage.style.display = 'none';
-        if (this.status == 200) {
-            try {
-                const response = JSON.parse(this.responseText);
-                console.log(response);
-                if (response && response.role) {
-                    if (response.role === 'owner') {
-                        window.location.href = 'owner-dashboard.html';
-                    } else if (response.role === 'walker') {
-                        window.location.href = 'walker-dashboard.html';
-                    } else {
-                        loginMessage.textContent = 'Login successful but role not recognised.';
-                        loginMessage.style.display = 'block';
-                    }
-                } else {
-                    loginMessage.textContent = 'Role information missing.';
-                    loginMessage.style.display = 'block';
-                }
-            } catch (e) {
-                console.error('Error parsing response:', e);
-                loginMessage.textContent = 'Error processing login response.';
-                loginMessage.style.display = 'block';
-            }
-    } else if (this.status >= 400) {
-            // Handle error responses
-            loginMessage.textContent = 'Login failed. Please check your credentials.';
-            loginMessage.style.display = 'block';
-        } else {
-            loginMessage.textContent = 'Unexpected response from server.';
-            loginMessage.style.display = 'block';
+        if (this.readyState == 4 && this.status == 200) {
+            alert("Welcome "+this.responseText);
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("Login failed");
         }
-    //Open connection to server & send the post data using a POST request
+    };
+
+    // Open connection to server & send the post data using a POST request
+    // We will cover POST requests in more detail in week 8
     xmlhttp.open("POST", "/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
     xmlhttp.send(JSON.stringify(user));
-}
+
 }
 
 function logout(){
